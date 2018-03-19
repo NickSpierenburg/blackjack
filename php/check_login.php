@@ -1,6 +1,6 @@
 <?php
 
-require_once('dbconnect.php');
+require_once('../includes/dbconnect.php');
 
 $options = [
     'cost' => 12,
@@ -25,7 +25,7 @@ if($count==1){
             $_SESSION['user'] = $username;
             $_SESSION['credit'] = $row['credit'];
     	    $_SESSION['userid'] = $row['id'];
-    	    header("location:index.php");
+    	    header("location:../index.php");
         } else {
             echo "WRONG PASSWORD!";
         }
