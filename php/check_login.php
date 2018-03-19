@@ -1,8 +1,10 @@
 <?php
 
+
 require_once('../includes/credentials.php');
 session_start();
 credential();
+
 
 $options = [
     'cost' => 12,
@@ -27,7 +29,7 @@ if($count==1){
             $_SESSION['user'] = $username;
             $_SESSION['credit'] = $row['credit'];
     	    $_SESSION['userid'] = $row['id'];
-    	    header("location:index.php");
+    	    header("location:../index.php");
         } else {
             echo "WRONG PASSWORD!";
         }
