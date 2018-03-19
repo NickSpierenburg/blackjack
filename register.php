@@ -64,7 +64,7 @@
         Blackjack User Registration
       </div>
     </h2>
-    <form class="ui large form" method="post" action="check_register.php">
+    <form class="ui large form" method="post" action="php/check_register.php">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
@@ -92,7 +92,7 @@
     </form>
 
     <div class="ui message">
-      Already have an account? <a href="php/index.php">Login</a>
+      Already have an account? <a href="index.php">Login</a>
     </div>
   </div>
 </div>
