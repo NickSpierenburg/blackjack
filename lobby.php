@@ -1,6 +1,6 @@
 <?php
 
-require_once('dbconnect.php');
+require_once('includes/dbconnect.php');
 
 if(!isset($_SESSION['user'])) {
   header("location:index.php");

@@ -1,6 +1,6 @@
 <?php
 
-require_once('dbconnect.php');
+require_once('includes/dbconnect.php');
 
 if(isset($_SESSION['user'])) {
   header("location:lobby.php");
@@ -85,7 +85,7 @@ if(isset($_SESSION['user'])) {
     </form>
 
     <div class="ui message">
-      $5 free credit? <a href="register.php">Sign Up</a>
+      $5 free credit? <a href="php/register.php">Sign Up</a>
     </div>
   </div>
 </div>

@@ -92,7 +92,7 @@
     </form>
 
     <div class="ui message">
-      Already have an account? <a href="index.php">Login</a>
+      Already have an account? <a href="php/index.php">Login</a>
     </div>
   </div>
 </div>
