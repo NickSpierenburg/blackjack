@@ -1,6 +1,6 @@
 <?php
 
-require_once('includes/dbconnect.php');
+require_once('../includes/dbconnect.php');
 
 $options = [
     'cost' => 12,
@@ -26,7 +26,7 @@ if($password == $password2) {
         $sqlInsert="INSERT INTO users (username, password) VALUES ('$username','$password')";
         $connect->query($sqlInsert);
 
-        echo "<center>Registration succesful, you are now logged in! <a href='index.php'>Login</a></center>";
+        echo "<center>Registration succesful, you are now logged in! <a href='../index.php'>Login</a></center>";
     } else {
         echo "Username already in use!";
     }
