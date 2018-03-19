@@ -1,4 +1,9 @@
 <?php
+require_once('../includes/credentials.php');
+session_start();
+credential();
+
+echo "YOYO";
 if (isset($_GET['playerData'])){
     $playerValue = array_sum($_GET['playerData']);
     global $playerValue;

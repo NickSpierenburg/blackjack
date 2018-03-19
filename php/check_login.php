@@ -1,6 +1,8 @@
 <?php
 
-require_once('dbconnect.php');
+require_once('../includes/credentials.php');
+session_start();
+credential();
 
 $options = [
     'cost' => 12,

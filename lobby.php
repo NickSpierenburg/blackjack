@@ -1,6 +1,8 @@
 <?php
 
-require_once('includes/dbconnect.php');
+require_once('includes/credentials.php');
+session_start();
+credential(); 
 
 if(!isset($_SESSION['user'])) {
   header("location:index.php");
