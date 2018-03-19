@@ -63,7 +63,7 @@ if(isset($_SESSION['user'])) {
         Blackjack User Login
       </div>
     </h2>
-    <form class="ui large form" method="post" action="check_login.php">
+    <form class="ui large form" method="post" action="php/check_login.php">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
@@ -85,7 +85,7 @@ if(isset($_SESSION['user'])) {
     </form>
 
     <div class="ui message">
-      $5 free credit? <a href="php/register.php">Sign Up</a>
+      $5 free credit? <a href="register.php">Sign Up</a>
     </div>
   </div>
 </div>
