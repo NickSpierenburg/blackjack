@@ -1,3 +1,10 @@
+<html>
+    <head>
+    <script>
+        
+    </script>
+    </head>
+</html>
 <?php
 require_once('../includes/credentials.php');
 session_start();

@@ -24,12 +24,12 @@ if($password == $password2) {
     $username = mysqli_real_escape_string($connect, $username);
     $password = mysqli_real_escape_string($connect, $password);
     
-    $sql="SELECT * FROM users WHERE username='$username'";
+    $sql="SELECT * FROM blackjack_users WHERE username='$username'";
     $result=mysqli_query($connect, $sql);
     $count=mysqli_num_rows($result);
     if($count == 0) {
         $password = password_hash($password, PASSWORD_BCRYPT, $options);
-        $sqlInsert="INSERT INTO users (username, password) VALUES ('$username','$password')";
+        $sqlInsert="INSERT INTO blackjack_users (username, password) VALUES ('$username','$password')";
         $connect->query($sqlInsert);
 
         echo "<center>Registration succesful, you are now logged in! <a href='../index.php'>Login</a></center>";
