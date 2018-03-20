@@ -1,9 +1,13 @@
 <?php
 
+
+session_start();
+
 // require_once('includes/dbconnect.php');
 require_once('credentials.php');
 
 $conn = createconnect($host,$dbusername,$dbpassword,$db_name);
+
 
 if(!isset($_SESSION['user'])) {
   header("location:index.php");

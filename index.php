@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // require_once('includes/dbconnect.php');
 require_once('credentials.php');
 
@@ -61,11 +63,13 @@ if(isset($_SESSION['user'])) {
 
 <div class="ui middle aligned center aligned grid">
   <div class="column">
-    <h2 class="ui teal image header">
-      <div class="content">
+    <div class="content">
+        <h2 class="ui teal image header">
+
         Blackjack User Login
-      </div>
-    </h2>
+     
+        </h2>
+    </div>
     <form class="ui large form" method="post" action="php/check_login.php">
       <div class="ui stacked segment">
         <div class="field">
