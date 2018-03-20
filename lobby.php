@@ -168,7 +168,7 @@ if(!isset($_SESSION['user'])) {
           <h4>Leaderboard</h4>
         </div>
         <div class="ten wide column">
-          <div style="background-image: url('img/table.png'); width: 960px; height: 640px;">
+          <div style="background-image: url('img/table.png'); width: 966px; height: 640px;">
             <h4>Game 1</h4>
             <div id="players" style="position: absolute; bottom: 230px; width: 95%;">
               <table class="ui celled table" style="background: none; color: white; border: none; text-align: center;">
@@ -199,6 +199,13 @@ if(!isset($_SESSION['user'])) {
                   </tr>
                 </tbody>
               </table>
+            </div>
+            <div id="playerMenu" style="width: 95%; background-color: #333333; color: white; padding-top: 20px; padding-bottom: 20px; position: absolute; bottom: 00px;">
+              <input type="text" placeholder="Enter your bet" id="inputBet">
+              <input type="button" value="Bet" id="ready">
+              <nobr style="margin-left: 1em;">Max: <?= $_SESSION['credit'] ?></nobr>
+              <input type="button" value="Hit" id="hitButton" style="margin-left: 5em;">
+              <input type="button" value="Stop" id="stopButton">
             </div>
           </div>
         </div>
