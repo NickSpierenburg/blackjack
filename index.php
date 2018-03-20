@@ -1,7 +1,12 @@
 <?php
-require_once('includes/credentials.php');
+
 session_start();
-credential();
+
+// require_once('includes/dbconnect.php');
+require_once('credentials.php');
+
+$connect = createconnect($host,$dbusername,$dbpassword,$db_name);
+print_r($connect);
 
 if(isset($_SESSION['user'])) {
   header("location:lobby.php");
