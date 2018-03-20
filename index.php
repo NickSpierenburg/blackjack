@@ -7,7 +7,6 @@ require_once('credentials.php');
 
 $connect = createconnect($host,$dbusername,$dbpassword,$db_name);
 
-
 if(isset($_SESSION['user'])) {
   header("location:lobby.php");
 }
