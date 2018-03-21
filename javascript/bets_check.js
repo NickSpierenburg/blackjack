@@ -1,26 +1,22 @@
+$("#ready").click(function(){
 
-    $("#ready").click(function(){
-            
-        var bet = $("#inputBet").val();
+    var bet = $("#inputBet").val();
 
-        if(bet == 0){
-            alert("Enter a bet to start");
-        }else{
-            $.ajax({
-                url:"php/check_bets.php",
-                data: {playerBet: bet, ready:"ready"},
-
-                method: "POST",
-                success: function(data) { //takes the place of the callback function
-                        console.log(data)
-                },
-                failure: function(err){//takes the place of the callback function
-                        console.log(err)
-                }
-            })
-        }
-    });
-                    
-                    
-                    
-                    
+    if(bet == 0){
+        alert("Enter a bet to start");
+    }else{
+        $.ajax( {
+            url: "php/check_bets.php",
+            crossdomain: true,
+            type: "POST",
+            data: {playerBet : bet},						
+            success: function(result) {
+                    $('#playerMenu').append(result);
+                    console.log(result)
+            },
+            error: function(err) {
+                    console.log("THE ERROR: ",err)
+            } 
+        })  
+    }
+});
