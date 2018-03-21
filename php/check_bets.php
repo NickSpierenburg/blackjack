@@ -1,13 +1,22 @@
 <?php
     require_once('../includes/credentials.php');
-    credential();
+    $conn = createconnect($host,$dbusername,$dbpassword,$db_name);
+   
+    $playerbet = 'p'.$_GET['playerid'].'_bet';
+    
     echo $_POST['bet'];
+    
     if(isset($_POST['bet'])) {
         $bet = json_decode($_POST['bet']);
         $ready = json_decode($_POST['ready']);
             echo $bet;
-        $sql = "INSERT INTO blackjack_games(p1_bet) VALUES('".$bet."','".$ready."');";
-        $connect->query($sql);
+         $_SESSION['credit'] = $_SESSION['credit'] - $bet;
+         
+         $sql = "INSERT INTO blackjack_games(".$playerbet.") VALUES('".$bet."','".$ready."');";
+         
+        $result = $conn->query('SELECT * FROM games WHERE game_id = 1');
+        
+       
     }
   
     

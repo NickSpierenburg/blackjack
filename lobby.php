@@ -137,12 +137,13 @@ if(!isset($_SESSION['user'])) {
 
   </style>
 
-  <script src="./javascript/bets_check.js"></script>
   
-  <script src="https://semantic-ui.com/examples/assets/library/jquery.min.js""></script>
+  
+  <script src="https://semantic-ui.com/examples/assets/library/jquery.min.js"></script>
   <script src="https://semantic-ui.com/dist/components/visibility.js"></script>
   <script src="https://semantic-ui.com/dist/components/sidebar.js"></script>
   <script src="https://semantic-ui.com/dist/components/transition.js"></script>
+
 </head>
 <body>
 
@@ -175,33 +176,33 @@ if(!isset($_SESSION['user'])) {
         </div>
         <div class="ten wide column">
           <div style="background-image: url('img/table.png'); width: 966px; height: 640px;">
-            <h4>Game 1</h4>
+            <h4 id="serverMessage">Game 1</h4>
             <div id="players" style="position: absolute; bottom: 230px; width: 95%;">
               <table class="ui celled table" style="background: none; color: white; border: none; text-align: center;">
                 <tbody>
                   <tr>
-                    <td>Player 4</td>
-                    <td>Player 3</td>
-                    <td>Player 2</td>
-                    <td>Player 1</td>
+                    <td id="user_4"><b>Player 4</b></td>
+                    <td id="user_3"><b>Player 3</b></td>
+                    <td id="user_2"><b>Player 2</b></td>
+                    <td id="user_1"><b>Player 1</b></td>
                   </tr>
                   <tr>
-                    <td>Score: 0</td>
-                    <td>Score: 0</td>
-                    <td>Score: 0</td>
-                    <td><b>Score: 0</b></td>
+                    <td id="score_4">Score: 0</td>
+                    <td id="score_3">Score: 0</td>
+                    <td id="score_2">Score: 0</td>
+                    <td id="score_1">Score: 0</td>
                   </tr>
                   <tr>
-                    <td>Not ready</td>
-                    <td>Not ready</td>
-                    <td>Not ready</td>
-                    <td>Not ready</td>
+                    <td id="state_4">Not ready</td>
+                    <td id="state_3">Not ready</td>
+                    <td id="state_2">Not ready</td>
+                    <td id="state_1">Not ready</td>
                   </tr>
                   <tr>
-                    <td><b>Bet: 0.50</b></td>
-                    <td><b>Bet: 0.50</b></td>
-                    <td><b>Bet: 0.50</b></td>
-                    <td><b>Bet: 0.50</b></td>
+                    <td id="bet_4"><b>Bet: 0.50</b></td>
+                    <td id="bet_3"><b>Bet: 0.50</b></td>
+                    <td id="bet_2"><b>Bet: 0.50</b></td>
+                    <td id="bet_1"><b>Bet: 0.50</b></td>
                   </tr>
                 </tbody>
               </table>
@@ -224,6 +225,10 @@ if(!isset($_SESSION['user'])) {
 
   </div>
 </div>
+
+<script src="javascript/checkSpots.js"></script>
+<script src="javascript/joinTable.js"></script>
+<script src="javascript/bets_check.js"></script>
 
 </body>
 
