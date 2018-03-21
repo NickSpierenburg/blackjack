@@ -208,7 +208,7 @@ if(!isset($_SESSION['user'])) {
               </table>
             </div>
             <div id="playerMenu" style="width: 95%; background-color: #333333; color: white; padding-top: 20px; padding-bottom: 20px; position: absolute; bottom: 00px;">
-              <input type="text" placeholder="Enter your bet" id="inputBet">
+              <input type="text" placeholder="Enter your bet" value= "0" id="inputBet">
               <input type="button" value="Bet" id="ready">
               <nobr style="margin-left: 1em;">Max: <?= $_SESSION['credit'] ?></nobr>
               <input type="button" value="Hit" id="hitButton" style="margin-left: 5em;">
