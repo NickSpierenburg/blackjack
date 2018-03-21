@@ -137,6 +137,8 @@ if(!isset($_SESSION['user'])) {
 
   </style>
 
+  <script src="./javascript/bets_check.js"></script>
+  
   <script src="https://semantic-ui.com/examples/assets/library/jquery.min.js""></script>
   <script src="https://semantic-ui.com/dist/components/visibility.js"></script>
   <script src="https://semantic-ui.com/dist/components/sidebar.js"></script>
