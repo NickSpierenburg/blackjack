@@ -7,7 +7,7 @@ $conn = createconnect($host,$dbusername,$dbpassword,$db_name);
 
 $players = [];
 
-$result = $conn->query('SELECT * FROM games WHERE game_id = 1');
+$result = $conn->query('SELECT * FROM blackjack_games WHERE game_id = 1');
 while($row = $result->fetch_assoc()) {
 	$players[1] = $row['p1_id'];
 	$players[2] = $row['p2_id'];

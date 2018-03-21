@@ -1,9 +1,6 @@
-<script src="https://semantic-ui.com/examples/assets/library/jquery.min.js"></script>
-    <script>
-              <input type="text" placeholder="Enter your bet" id="inputBet">
-              <input type="button" value="Bet" id="ready">
-              
+
         $("#ready").click(function(e){
+            
             var bet = $("#inputBet").val();
             if(bet == ""){
                 e.preventDefault();
@@ -14,10 +11,4 @@
                 })
             }
         });
-    </script>
                     
-
-        
-$.ajax({url: "php/check_free_spots.php", success: function(result){
-	  $('body').append(result);
-	}});
