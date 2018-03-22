@@ -3,7 +3,7 @@
 session_start();
 
 require_once('../credentials.php');
-$conn = createconnect($host,$dbusername,$dbpassword,$db_name);
+$conn = createconnect();
 
 $players = [];
 
