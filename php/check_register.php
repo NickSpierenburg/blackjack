@@ -6,7 +6,7 @@ session_start();
 // require_once('includes/dbconnect.php');
 require_once('../credentials.php');
 
-$connect = createconnect($host,$dbusername,$dbpassword,$db_name);
+$connect = createconnect();
 
 $options = [
     'cost' => 12,

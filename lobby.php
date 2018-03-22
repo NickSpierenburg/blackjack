@@ -6,7 +6,7 @@ session_start();
 // require_once('includes/dbconnect.php');
 require_once('credentials.php');
 
-$conn = createconnect($host,$dbusername,$dbpassword,$db_name);
+$conn = createconnect();
 
 
 if(!isset($_SESSION['user'])) {
@@ -216,11 +216,13 @@ if(!isset($_SESSION['user'])) {
                 </tbody>
               </table>
             </div>
+
             <div id="playerMenu" style="width: 95%; background-color: #333333; color: white; padding-top: 20px; padding-bottom: 20px; position: absolute; bottom: 00px;">
                 <form>
                     <input type="text" name="bet" placeholder="Enter your bet" value= "0" id="inputBet">
                     <button type="button" value="Bet" id="ready"></button>
                 </form>
+
               <nobr style="margin-left: 1em;">Max: <?= $_SESSION['credit'] ?></nobr>
               <input type="button" value="Hit" onclick="getCard()" id="hitButton" style="margin-left: 5em;">
               <input type="button" value="Stop" id="stopButton">
