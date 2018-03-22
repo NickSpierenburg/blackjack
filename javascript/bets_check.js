@@ -1,19 +1,15 @@
-$("#ready").click(function(event){
+$("#ready").click(function(){
 
     var bet = $("#inputBet").val();
 
     if(bet == 0){
         alert("Enter a bet to start");
     }else{
-//        $.ajax({url: "php/check_bets.php?bet=" + bet, success: function(result){
-//	  $('#serverMessage').html(result);
-//	}});
 
  
         $.ajax( {
             url: "/blackjack/php/check_bets.php?playerBet="+bet,						
             success: function(result) {
-              
                     console.log("GELUKT", result);
             }
         })  

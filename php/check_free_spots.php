@@ -3,7 +3,7 @@
 session_start();
 
 require_once('../credentials.php');
-$conn = createconnect($host,$dbusername,$dbpassword,$db_name);
+$conn = createconnect();
 
 $players = [];
 
@@ -30,6 +30,11 @@ foreach($players as $playerid => $userid) {
 			echo '
 				<script>
 					document.getElementById("'.$stateid.'").innerHTML = "Waiting for player.."
+				</script>
+			';
+			echo '
+				<script>
+					document.getElementById("playerMenu").style.visibility = "visible"
 				</script>
 			';
 		}
