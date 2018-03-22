@@ -205,13 +205,15 @@ if(!isset($_SESSION['user'])) {
                     <td id="bet_1"><b>Bet: 0.50</b></td>
                   </tr>
                   <tr>
-                      <td id="cards_4"></td>
-                      <td id="cards_3"></td>
-                      <td id="cards_2"></td>
-                      <td id="cardp1_1"></td>
-                      <td id="cardp1_2"></td>
-                      
-                      
+                      <td id="card4_1"></td>
+                      <td id="card4_2"></td>
+                      <td id="card3_1"></td>
+                      <td id="card3_2"></td>
+                      <td id="card2_1"></td>
+                      <td id="card2_2"></td>
+                      <td id="card1_1"></td>
+                      <td id="card1_2"></td>
+             
                   </tr>
                 </tbody>
               </table>
