@@ -32,6 +32,11 @@ foreach($players as $playerid => $userid) {
 					document.getElementById("'.$stateid.'").innerHTML = "Waiting for player.."
 				</script>
 			';
+			echo '
+				<script>
+					document.getElementById("playerMenu").style.visibility = "visible"
+				</script>
+			';
 		}
 	} elseif($userid == $_SESSION['userid']) {
 		$_SESSION['seat'] = $playerid;
