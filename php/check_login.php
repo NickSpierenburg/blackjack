@@ -20,7 +20,7 @@ $password = stripslashes($password);
 $username = mysqli_real_escape_string($connect, $username);
 $password = mysqli_real_escape_string($connect, $password);
 
-$sql="SELECT * FROM users WHERE username='$username'";
+$sql="SELECT * FROM blackjack_users WHERE username='$username'";
 $result=mysqli_query($connect, $sql);
 $count=mysqli_num_rows($result);
 
@@ -31,6 +31,7 @@ if($count==1){
             $_SESSION['user'] = $username;
             $_SESSION['credit'] = $row['credit'];
     	    $_SESSION['userid'] = $row['id'];
+            $_SESSION['seat'] = 0;
     	    header("location:../index.php");
         } else {
             echo "WRONG PASSWORD!";
