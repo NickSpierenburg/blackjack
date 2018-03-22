@@ -204,6 +204,15 @@ if(!isset($_SESSION['user'])) {
                     <td id="bet_2"><b>Bet: 0.50</b></td>
                     <td id="bet_1"><b>Bet: 0.50</b></td>
                   </tr>
+                  <tr>
+                      <td id="cards_4"></td>
+                      <td id="cards_3"></td>
+                      <td id="cards_2"></td>
+                      <td id="cardp1_1"></td>
+                      <td id="cardp1_2"></td>
+                      
+                      
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -213,7 +222,7 @@ if(!isset($_SESSION['user'])) {
                     <button type="button" value="Bet" id="ready"></button>
                 </form>
               <nobr style="margin-left: 1em;">Max: <?= $_SESSION['credit'] ?></nobr>
-              <input type="button" value="Hit" id="hitButton" style="margin-left: 5em;">
+              <input type="button" value="Hit" onclick="getCard()" id="hitButton" style="margin-left: 5em;">
               <input type="button" value="Stop" id="stopButton">
             </div>
           </div>
@@ -231,7 +240,7 @@ if(!isset($_SESSION['user'])) {
 <script src="javascript/checkSpots.js"></script>
 <script src="javascript/joinTable.js"></script>
 <script src="javascript/bets_check.js"></script>
-
+<script src="javascript/cards_array.js"></script>
 </body>
 
 </html>
