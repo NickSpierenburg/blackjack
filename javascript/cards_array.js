@@ -10,7 +10,7 @@
                     var cardObj = jQuery.parseJSON(result);
                     console.log("wooo", result );
                     $(`#card${cardObj.playerid}_2`).html(cardObj.card1);
-                    console.log("CARD 2 ",cardObj.card2);
+                    console.log("CHECK ",$(`#card${cardObj.playerid}_2`).html(cardObj.card1));
                     
             }});
         }
