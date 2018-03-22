@@ -31,6 +31,7 @@ if($count==1){
             $_SESSION['user'] = $username;
             $_SESSION['credit'] = $row['credit'];
     	    $_SESSION['userid'] = $row['id'];
+            $_SESSION['seat'] = 0;
     	    header("location:../index.php");
         } else {
             echo "WRONG PASSWORD!";

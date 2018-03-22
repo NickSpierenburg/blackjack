@@ -15,17 +15,26 @@ while($row = $result->fetch_assoc()) {
 	$players[4] = $row['p4_id'];
 }
 
-$seated = 0;
+$seat = $_SESSION['seat'];
 
 foreach($players as $playerid => $userid) {
 	$stateid = 'state_' . $playerid;
 	if($userid == 0) {
-		echo '
-			<script>
-				document.getElementById("'.$stateid.'").innerHTML = "<input type=button onclick=\"joinTable('.$playerid.')\" value=Join>"
-			</script>
-		';
+		if($seat == 0) {
+			echo '
+				<script>
+					document.getElementById("'.$stateid.'").innerHTML = "<input type=button onclick=\"joinTable('.$playerid.')\" value=Join>"
+				</script>
+			';
+		} else {
+			echo '
+				<script>
+					document.getElementById("'.$stateid.'").innerHTML = "Waiting for player.."
+				</script>
+			';
+		}
 	} elseif($userid == $_SESSION['userid']) {
+		$_SESSION['seat'] = $playerid;
 		echo '
 			<script>
 				document.getElementById("'.$stateid.'").innerHTML = "Your seat"
