@@ -2,7 +2,7 @@
 
 $host="localhost";
 $dbusername="root"; 
-$dbpassword="";
+$dbpassword="root";
 $db_name="blackjack";
 
 function createconnect() {

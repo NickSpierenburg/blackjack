@@ -6,9 +6,9 @@
     </head>
 </html>
 <?php
-require_once('../includes/credentials.php');
 session_start();
-credential();
+require_once('../includes/credentials.php');
+$conn = createconnect($host,$dbusername,$dbpassword,$db_name);
 
 echo "YOYO";
 if (isset($_GET['playerData'])){
