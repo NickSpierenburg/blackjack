@@ -11,7 +11,7 @@ function cardValue(){
     $inputValue = $card1+$card2;
 //    echo $inputValue;
 
-//   $result= $conn->query("UPDATE blackjack_games SET p".$_SESSION['seat']."_score=".$inputValue."");
+   $result= $conn->query("UPDATE blackjack_games SET p".$_SESSION['seat']."_score=".$inputValue."");
     
     $cardArray = array(playerid=>$_SESSION['seat'], card1=>$card1, card2=>$card2, cardsValue=> $inputValue);
          $cards = json_encode($cardArray);
