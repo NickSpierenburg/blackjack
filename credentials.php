@@ -1,5 +1,8 @@
 <?php
-
+$host="localhost";
+$dbusername="root"; 
+$dbpassword="";
+$db_name="blackjack";
 
 function createconnect() {
 	$host="localhost";
