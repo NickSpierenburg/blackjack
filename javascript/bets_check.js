@@ -10,7 +10,9 @@ $("#ready").click(function(){
         $.ajax( {
             url: "/blackjack/php/check_bets.php?playerBet="+bet,						
             success: function(result) {
-                    console.log("GELUKT", result);
+                var betObj = jQuery.parseJSON(result);
+                console.log("PLAYA ID", betObj.playerid)
+                $(`#bet_${betObj.playerid}`).html("Your Bet is: "+betObj.bet);
             }
         })  
     }
