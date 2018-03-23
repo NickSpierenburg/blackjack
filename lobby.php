@@ -206,29 +206,30 @@ if(!isset($_SESSION['user'])) {
                     <td id="bet_1"><b>Bet: 0.50</b></td>
                   </tr>
                   <tr>
-                      <td id="card4_1"></td>
-                      <td id="card4_2"></td>
-                      <td id="card3_1"></td>
-                      <td id="card3_2"></td>
-                      <td id="card2_1"></td>
-                      <td id="card2_2"></td>
-                      <td id="card1_1"></td>
-                      <td id="card1_2"></td>
-             
+                    <td id="card4_1"></td>
+                    <td id="card4_2"></td>
+                    <td id="card3_1"></td>
+                    <td id="card3_2"></td>
+                    <td id="card2_1"></td>
+                    <td id="card2_2"></td>
+                    <td id="card1_1"></td>
+                    <td id="card1_2"></td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div id="playerMenu" style="width: 95%; background-color: #333333; color: white; padding-top: 20px; padding-bottom: 20px; position: absolute; bottom: 00px;">
-                <form>
-                    <input type="text" name="bet" placeholder="Enter your bet" value= "0" id="inputBet">
-                    <button type="button" value="Bet" id="ready">Place Your Bet</button>
-                </form>
-
-              <nobr style="margin-left: 1em;">Max: <?= $_SESSION['credit'] ?></nobr>
-              <input type="button" value="Hit" onclick="getCard()" id="hitButton" style="margin-left: 5em;">
-              <input type="button" value="Stop" id="stopButton">
+              <form>
+                  <input type="text" name="bet" placeholder="Enter your bet" value= "0" id="inputBet">
+                  <button type="button" value="Bet" id="ready">Place Your Bet</button>
+                  <nobr style="margin-left: 1em;">Max bet: <?= $_SESSION['credit'] ?></nobr>
+              </form>
+              <div id="readyMenu" style="visibility: hidden;">
+                <hr>
+                <input type="button" value="Hit" onclick="getCard()" id="hitButton" style="margin-left: 5em;">
+                <input type="button" value="Stop" id="stopButton">
+              </div>
             </div>
           </div>
         </div>

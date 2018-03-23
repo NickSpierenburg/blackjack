@@ -10,14 +10,14 @@
        $seat = $_SESSION['seat'];
        $conn = createconnect();
        $player = "p".$seat."_bet";
-       $ready = "p".$seat."_ready";
+       $ready = "p".$seat."_state";
        $bet = $_GET['playerBet'];
        $_SESSION['credit'] = $_SESSION['credit'] - $bet; 
        $newCredit = $_SESSION['credit'];
        
        $updateBet = "UPDATE blackjack_games SET ".$player."=".$bet." WHERE game_id = 1";
-       $updateReady = "UPDATE blackjack_games SET ".$ready."= 1 WHERE game_id = 1";
-       $updateCredit ="UPDATE blackjack_users SET credit = ".$newCredit." WHERE id = ".$_SESSION['userid']."";
+       $updateReady = "UPDATE blackjack_games SET ".$ready."= 'ready' WHERE game_id = 1";
+       $updateCredit ="UPDATE blackjack_users SET credit = ".$newCredit." WHERE id = ".$_SESSION['userid'];
 
        $select = "SELECT * FROM blackjack_games WHERE game_id=1";
        
