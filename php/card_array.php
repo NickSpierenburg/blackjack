@@ -19,16 +19,7 @@ function cardValue(){
     $scoreCheck = $conn->query($sql);
 
     while($row = $scoreCheck->fetch_assoc()) {
-	if($row["p".$seat."_score"] == 0){
-                $result = $conn->query("UPDATE blackjack_games SET p".$seat."_score = ".$inputValue." WHERE game_id = 1");
 
-            $cardArray = array('playerid'=>$seat, 'card1'=>$card1, 'card2'=>$card2, 'cardsValue'=> $inputValue);
-
-            $cards = json_encode($cardArray);
-            
-            echo $cards;
-     
-        }else{
            $result= $conn->query("UPDATE blackjack_games SET p".$seat."_score=".$inputValue." WHERE game_id = 1");
 
             $cardArray = array('playerid'=>$seat, 'card1'=>$card1, 'card2'=>$card2, 'cardsValue'=> $inputValue);
@@ -39,4 +30,4 @@ function cardValue(){
         }
 
     }
-}
+//}
