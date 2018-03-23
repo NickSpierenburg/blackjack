@@ -170,9 +170,10 @@ if(!isset($_SESSION['user'])) {
 
     <div class="ui grid">
       <div class="three column row">
-        <div class="three wide column">
+        <div class="three wide column" id="leaderboard">
           <br/>
           <h4>Leaderboard</h4>
+          <button id="lbrefresh">Refresh</button>
         </div>
         <div class="ten wide column">
           <div style="background-image: url('img/table.png'); width: 966px; height: 640px;">
@@ -245,6 +246,7 @@ if(!isset($_SESSION['user'])) {
 <script src="javascript/joinTable.js"></script>
 <script src="javascript/bets_check.js"></script>
 <script src="javascript/cards_array.js"></script>
+<script src="javascript/check_leaderboard.js"></script>
 </body>
 
 </html>
