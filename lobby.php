@@ -170,9 +170,17 @@ if(!isset($_SESSION['user'])) {
 
     <div class="ui grid">
       <div class="three column row">
-        <div class="three wide column" id="leaderboard">
+        <div class="three wide column">
           <br/>
           <h4>Leaderboard</h4>
+          <h3>Top 5</h3>
+          <ol>
+              <li id="lb_n1"></li>
+              <li id="lb_n2"></li>
+              <li id="lb_n3"></li>
+              <li id="lb_n4"></li>
+              <li id="lb_n5"></li>
+          </ol>
           <button id="lbrefresh">Refresh</button>
         </div>
         <div class="ten wide column">
