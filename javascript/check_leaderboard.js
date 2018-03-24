@@ -1,4 +1,4 @@
-$('#lbrefresh').click(function(){
+$(document).ready(function(){
 
 setInterval(refreshLeaderboard,5000);
     refreshLeaderboard();
