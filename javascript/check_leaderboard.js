@@ -13,7 +13,7 @@ $('#lbrefresh').click(function(){
                 var leaderObj = JSON.parse(result);
 
                 
-                console.log("LEADERBOARD DATA", hey);
+                console.log("LEADERBOARD DATA", leaderObj);
                 
                 
                 $(`#lb_n1`).html(`${leaderObj[0].username} <br/>Credits: ${leaderObj[0].credit}<br/><hr>`);
