@@ -181,7 +181,6 @@ if(!isset($_SESSION['user'])) {
               <li id="lb_n4"></li>
               <li id="lb_n5"></li>
           </ol>
-          <button id="lbrefresh">Refresh</button>
         </div>
         <div class="ten wide column">
           <div style="background-image: url('img/table.png'); width: 966px; height: 640px;">
