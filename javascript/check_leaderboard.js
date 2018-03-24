@@ -8,14 +8,9 @@ setInterval(refreshLeaderboard,5000);
         $.ajax( {
             url: "/blackjack/php/leaderboard.php",						
             success: function(result) {
-                console.log("LEADERBOARD Result", result);
-                
-                var leaderObj = JSON.parse(result);
 
-                
-                console.log("LEADERBOARD DATA", leaderObj);
-                
-                
+                var leaderObj = JSON.parse(result);
+            
                 $(`#lb_n1`).html(`${leaderObj[0].username} <br/>Credits: ${leaderObj[0].credit}<br/><hr>`);
                 $(`#lb_n2`).html(`${leaderObj[1].username} <br/>Credits: ${leaderObj[1].credit}<br/><hr>`);
                 $(`#lb_n3`).html(`${leaderObj[2].username} <br/>Credits: ${leaderObj[2].credit}<br/><hr>`);
