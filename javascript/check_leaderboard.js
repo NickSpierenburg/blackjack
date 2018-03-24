@@ -1,6 +1,6 @@
 $('#lbrefresh').click(function(){
 
-//setInterval(refreshLeaderboard,5000);
+setInterval(refreshLeaderboard,5000);
     refreshLeaderboard();
     
      function refreshLeaderboard (){
