@@ -189,17 +189,22 @@ if(!isset($_SESSION['user'])) {
                 <table class="ui celled table" style="background: none; color: white; border: none; text-align: center;">
                     <tbody>
                         <tr>
+                            <td id="deadDealer"></td>
+                        </tr>
+                        <tr>
                             <input type="button" value="Get Bank Cards" onclick="dealerCards()" id="dealerButton" >
                         </tr>
                         <tr>
                             <td id="cards_dealer_1"></td>
+                            <td id="cards_dealer_3"></td>
                         </tr>
                         <tr>
                             <td id="cards_dealer_2"></td>
+                            <td id="cards_dealer_4"></td>
                         </tr>
                         <tr>
-                            <td id="cards_dealer_3"></td>
-                        </tr>
+                            <td id="cards_dealer_total"></td>
+                        </tr>                        
                     </tbody>
                 </table>
                 
