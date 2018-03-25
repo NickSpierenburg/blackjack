@@ -11,7 +11,8 @@ function cardValue(){
     $conn = createconnect();
     $card1 = $_GET['card1'];
     $card2 = $_GET['card2'];
-    $inputValue = $card1+$card2;
+    $_SESSION['playerCards'] = $card1+$card2;
+    $inputValue = $_SESSION['playerCards'];
     $seat = $_SESSION['seat'];
     
     $sql = "SELECT p".$seat."_score FROM blackjack_games WHERE game_id=1";
