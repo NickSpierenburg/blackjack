@@ -11,6 +11,7 @@ function getCard(){
                 console.log(cardObj);
             $(`#card${cardObj.playerid}_1`).html(cardObj.card1);
             $(`#card${cardObj.playerid}_2`).html(cardObj.card2);
+            $(`#card${cardObj.playerid}_total`).html(cardObj.cardsValue);
 
     }});
 }
