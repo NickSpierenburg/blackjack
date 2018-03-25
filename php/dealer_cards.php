@@ -15,8 +15,8 @@ function dealerValue(){
         $card4 = $_GET['card4'];
     
    
-        $inputValue = $card1+$card2+$card3+$card4;
-
+        $_SESSION['totalDealerCards'] = $card1+$card2+$card3+$card4;
+        $inputValue = $_SESSION['totalDealerCards'];
 
         $sql = "SELECT bank_score FROM blackjack_games WHERE game_id=1";
 
@@ -41,7 +41,8 @@ function dealerValue(){
 
     
    
-       $inputValue = $card1+$card2+$card3;
+      $_SESSION['totalDealerCards'] = $card1+$card2+$card3;
+        $inputValue = $_SESSION['totalDealerCards'];
 
     
         $sql = "SELECT bank_score FROM blackjack_games WHERE game_id=1";
@@ -65,7 +66,8 @@ function dealerValue(){
         $card2 = $_GET['card2'];
 
 
-       $inputValue = $card1+$card2;
+       $_SESSION['totalDealerCards'] = $card1+$card2;
+        $inputValue = $_SESSION['totalDealerCards'];
 
     
         $sql = "SELECT bank_score FROM blackjack_games WHERE game_id=1";

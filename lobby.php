@@ -270,8 +270,7 @@ if(!isset($_SESSION['user'])) {
                   
 
               </form>
-                <button id="payoutBtn" onclick="payOut()">Payout</button>
-                <nobr id="user" style= "visibility:hidden;"><?=$_SESSION['userid']?></nobr>   
+                <button id="payoutBtn" onclick="payOut()">Payout</button> 
                 <nobr id="player" style= "visibility:hidden;">bet_<?=$_SESSION['seat']?></nobr>  
                 <nobr id="playercardvalue" style= "visibility:hidden;">card<?=$_SESSION['seat']?>_total</nobr>  
               <div id="readyMenu" style="visibility: hidden;">
