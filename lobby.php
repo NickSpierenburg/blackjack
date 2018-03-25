@@ -283,7 +283,8 @@ if(!isset($_SESSION['user'])) {
         </div>
         <div class="three wide column">
           <br/>
-          <h4>Bank statistics</h4>
+          <h3>Bank statistics</h3>
+          <h5 id="bankStats"></h5>
         </div>
       </div>
     </div>
@@ -298,6 +299,7 @@ if(!isset($_SESSION['user'])) {
 <script src="javascript/check_leaderboard.js"></script>
 <script src="javascript/dealerCards.js"></script>
 <script src="javascript/payout.js"></script>
+<script src="javascript/bankStatistics.js"></script>
 </body>
 
 </html>
