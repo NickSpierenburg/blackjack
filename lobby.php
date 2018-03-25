@@ -193,13 +193,15 @@ if(!isset($_SESSION['user'])) {
                         </tr>
                         <tr>
                             <td id="cards_dealer_1"></td>
+                            <td id="cards_dealer_3"></td>
                         </tr>
                         <tr>
                             <td id="cards_dealer_2"></td>
+                            <td id="cards_dealer_4"></td>
                         </tr>
                         <tr>
-                            <td id="cards_dealer_3"></td>
-                        </tr>
+                            <td id="cards_dealer_total"></td>
+                        </tr>                        
                     </tbody>
                 </table>
                 
