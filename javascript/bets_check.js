@@ -11,7 +11,6 @@ $("#ready").click(function(){
             success: function(result) {
                 
                 var betObj = jQuery.parseJSON(result);
-                console.log("PLAYA ID", result)
                 $(`#bet_${betObj.playerid}`).html("Your Bet is: "+betObj.bet);
             }
         })  

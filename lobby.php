@@ -190,19 +190,14 @@ if(!isset($_SESSION['user'])) {
                     <tbody>
                         <tr>
                             <td id="deadDealer"></td>
-                        </tr>
-                        <tr>
+
                             <input type="button" value="Get Bank Cards" onclick="dealerCards()" id="dealerButton" >
                         </tr>
                         <tr>
                             <td id="cards_dealer_1"></td>
                             <td id="cards_dealer_3"></td>
-                        </tr>
-                        <tr>
                             <td id="cards_dealer_2"></td>
                             <td id="cards_dealer_4"></td>
-                        </tr>
-                        <tr>
                             <td id="cards_dealer_total"></td>
                         </tr>                        
                     </tbody>
@@ -238,13 +233,29 @@ if(!isset($_SESSION['user'])) {
                   </tr>
                   <tr>
                     <td id="card4_1"></td>
-                    <td id="card4_2"></td>
-                    <td id="card3_1"></td>
-                    <td id="card3_2"></td>
-                    <td id="card2_1"></td>
-                    <td id="card2_2"></td>
-                    <td id="card1_1"></td>
-                    <td id="card1_2"></td>
+
+                      <td id="card4_2"></td>
+
+                        <td id="card4_total"></td>
+
+                        <td id="card3_1"></td>
+                    
+                        <td id="card3_2"></td>
+
+                        <td id="card3_total"></td>
+
+                        <td id="card2_1"></td>
+
+                        <td id="card2_2"></td>
+
+                        <td id="card2_total"></td>
+
+                        <td id="card1_1"></td>
+
+                        <td id="card1_2"></td>
+
+                        <td id="card1_total"></td>
+                    </tr>
                   </tr>
                 </tbody>
               </table>
@@ -255,7 +266,14 @@ if(!isset($_SESSION['user'])) {
                   <input type="text" name="bet" placeholder="Enter your bet" value= "0" id="inputBet">
                   <button type="button" value="Bet" id="ready">Place Your Bet</button>
                   <nobr style="margin-left: 1em;">Max bet: <?= $_SESSION['credit'] ?></nobr>
+                
+                  
+
               </form>
+                <button id="payoutBtn" onclick="payOut()">Payout</button>
+                <nobr id="user" style= "visibility:hidden;"><?=$_SESSION['userid']?></nobr>   
+                <nobr id="player" style= "visibility:hidden;">bet_<?=$_SESSION['seat']?></nobr>  
+                <nobr id="playercardvalue" style= "visibility:hidden;">card<?=$_SESSION['seat']?>_total</nobr>  
               <div id="readyMenu" style="visibility: hidden;">
                 <hr>
                 <input type="button" value="Deal Cards" onclick="getCard()" id="hitButton" style="margin-left: 5em;">
@@ -280,6 +298,7 @@ if(!isset($_SESSION['user'])) {
 <script src="javascript/cards_array.js"></script>
 <script src="javascript/check_leaderboard.js"></script>
 <script src="javascript/dealerCards.js"></script>
+<script src="javascript/payout.js"></script>
 </body>
 
 </html>
