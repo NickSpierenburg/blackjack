@@ -185,6 +185,25 @@ if(!isset($_SESSION['user'])) {
         <div class="ten wide column">
           <div style="background-image: url('img/table.png'); width: 966px; height: 640px;">
             <h4 id="serverMessage">Game 1</h4>
+            <div id="bank">
+                <table class="ui celled table" style="background: none; color: white; border: none; text-align: center;">
+                    <tbody>
+                        <tr>
+                            <input type="button" value="Get Bank Cards" onclick="dealerCards()" id="dealerButton" >
+                        </tr>
+                        <tr>
+                            <td id="cards_dealer_1"></td>
+                        </tr>
+                        <tr>
+                            <td id="cards_dealer_2"></td>
+                        </tr>
+                        <tr>
+                            <td id="cards_dealer_3"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
             <div id="players" style="position: absolute; bottom: 230px; width: 95%;">
               <table class="ui celled table" style="background: none; color: white; border: none; text-align: center;">
                 <tbody>
@@ -234,7 +253,7 @@ if(!isset($_SESSION['user'])) {
               </form>
               <div id="readyMenu" style="visibility: hidden;">
                 <hr>
-                <input type="button" value="Hit" onclick="getCard()" id="hitButton" style="margin-left: 5em;">
+                <input type="button" value="Deal Cards" onclick="getCard()" id="hitButton" style="margin-left: 5em;">
                 <input type="button" value="Stop" id="stopButton">
               </div>
             </div>
@@ -255,6 +274,7 @@ if(!isset($_SESSION['user'])) {
 <script src="javascript/bets_check.js"></script>
 <script src="javascript/cards_array.js"></script>
 <script src="javascript/check_leaderboard.js"></script>
+<script src="javascript/dealerCards.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ createLeaderboard();
 
 function createLeaderboard(){
     $conn = createconnect();
-    $sql = "SELECT username, credit FROM blackjack_users ORDER BY credit DESC";
+    $sql = "SELECT username, credit FROM blackjack_users ORDER BY credit DESC LIMIT 5";
     $result = $conn->query($sql);
 
     $data= array();
