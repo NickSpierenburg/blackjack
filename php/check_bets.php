@@ -6,12 +6,12 @@
     placeBet();
     
     function placeBet(){
-        
-       $seat = $_SESSION['seat'];
        $conn = createconnect();
+       $seat = $_SESSION['seat'];
        $player = "p".$seat."_bet";
        $ready = "p".$seat."_state";
-       $bet = $_GET['playerBet'];
+       $_SESSION['bet'] = $_GET['playerBet'];
+       $bet = $_SESSION['bet'];
        $_SESSION['credit'] = $_SESSION['credit'] - $bet; 
        $newCredit = $_SESSION['credit'];
        
