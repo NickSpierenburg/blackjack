@@ -4,7 +4,6 @@ session_start();
 
 require_once('../credentials.php');
 
-
 cardValue();
 
 function cardValue(){
