@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    setInterval(refreshBankStats,5000);
+    setInterval(refreshBankStats,1000);
     refreshBankStats();
     
      function refreshBankStats (){

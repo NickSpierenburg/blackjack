@@ -32,7 +32,7 @@ session_start();
             $updatebankbalance = $conn->query($updateBankBalance);
             echo "Player has received Payout";
             }
-        }elseif($playerScore >= 21 || $playerScore < $dealerScore){
+        }elseif($playerScore > 21 || $playerScore < $dealerScore){
             
             $selectBankBalance = "SELECT bank_balance FROM blackjack_games WHERE game_id = 1";
             
