@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-setInterval(refreshLeaderboard,5000);
+setInterval(refreshLeaderboard,1000);
     refreshLeaderboard();
     
      function refreshLeaderboard (){

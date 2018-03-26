@@ -271,9 +271,8 @@ if(!isset($_SESSION['user'])) {
 
               </form>
                 <button id="payoutBtn" onclick="payOut()">Payout</button> 
-                <nobr id="player" style= "visibility:hidden;">bet_<?=$_SESSION['seat']?></nobr>  
-                <nobr id="playercardvalue" style= "visibility:hidden;">card<?=$_SESSION['seat']?>_total</nobr>  
-              <div id="readyMenu" style="visibility: hidden;">
+
+              <div id="readyMenu" >
                 <hr>
                 <input type="button" value="Deal Cards" onclick="getCard()" id="hitButton" style="margin-left: 5em;">
                 <input type="button" value="Stop" id="stopButton">
