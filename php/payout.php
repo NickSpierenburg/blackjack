@@ -20,8 +20,18 @@ session_start();
             $updateCredit = "UPDATE blackjack_users SET credit = ".$newcredit." WHERE id = ".$_SESSION['userid'];
             $updatecredit = $conn->query($updateCredit);
             
-            echo "Player has received Payout";
+            $selectBankBalance = "SELECT bank_balance FROM blackjack_games WHERE game_id = 1";
             
+            $getBankBalance = $conn->query($selectBankBalance);
+            //get the value of bank_balance from the db:
+            while ($row = $getBankBalance->fetch_assoc()) {
+                 $bankBalance = $row["bank_balance"];
+            
+            $newBankBalance =  $bankBalance - $bet;
+            $updateBankBalance = "UPDATE blackjack_games SET bank_balance = ".$newBankBalance." WHERE game_id = 1";
+            $updatebankbalance = $conn->query($updateBankBalance);
+            echo "Player has received Payout";
+            }
         }elseif($playerScore >= 21 || $playerScore < $dealerScore){
             
             $selectBankBalance = "SELECT bank_balance FROM blackjack_games WHERE game_id = 1";

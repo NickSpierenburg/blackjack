@@ -8,7 +8,7 @@ $(document).ready(function(){
         $.ajax( {
             url: "/blackjack/php/bank_statistics.php",						
             success: function(result) {
-                console.log("RESULT ",result)
+
                 $(`#bankStats`).html(result);
                 
             }
